@@ -20,13 +20,15 @@ async function loadPdf() {
     console.log(firstPage);
     const { width, height } = firstPage.getSize();
 
-    firstPage.drawText(document.forms["form"]["name"].value, {
-        x: width * positions["name"][0],
-        y: height * positions["name"][1],
-        size: 7,
-        font: helveticaFont,
-        color: rgb(0, 0, 0)
+    for(let i=0; i < Object.keys(positions).length; i++){
+      firstPage.drawText(document.forms["form"][i].value, {
+          x: width * positions[i][0],
+          y: height * positions[i][1],
+          size: 7,
+          font: helveticaFont,
+          color: rgb(1, 0, 0)
       })
+    }
     
     const pdfBytes = await pdfDoc.save();
     
