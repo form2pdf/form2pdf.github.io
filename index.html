@@ -1,107 +1,861 @@
-<!DOCTYPE html>
-<html>
 <head>
-    <meta charset="utf-8" />
-    <script type="text/javascript" src="https://unpkg.com/pdf-lib@1.4.0"></script>
-    <script type="text/javascript" src="https://unpkg.com/downloadjs@1.4.7"></script>
-    <script src="/js/positions.js"></script>
-    <script src="/js/main.js"></script>
+  <meta charset="utf-8" />
+  <script type="text/javascript" src="https://unpkg.com/pdf-lib@1.4.0"></script>
+  <script type="text/javascript" src="https://unpkg.com/downloadjs@1.4.7"></script>
+  <script src="/js/positions.js"></script>
+  <script src="/js/main.js"></script>
 </head>
 
-<body>
+<div class="formbold-main-wrapper">
+  <!-- Author: FormBold Team -->
+  <!-- Learn More: https://formbold.com -->
+  <div class="formbold-form-wrapper">
+    <button class="formbold-btn" onclick="loadPdf()">Generate PDF</button>
 
-<h2>HTML Forms</h2>
+    <img src="form.png" width=100px height=auto>
+    
+      <div class="formbold-input-group">
+        <label for="name" class="formbold-form-label"> Nome do Cliente </label>
+        <input
+          type="text"
+          name="nome_cliente"
+          id="nome_cliente"
+          placeholder="Nome do Cliente"
+          class="formbold-form-input"
+          value=""
+        />
+      </div>
 
-<button onclick="loadPdf()">Generate PDF</button>
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Nome do Procurador </label>
+        <input
+          type="text"
+          name="nome_procurador"
+          id="nome_procurador"
+          placeholder="Nome do Procurador"
+          class="formbold-form-input"
+        />
+      </div>
 
-<form name="form">
-  <label for="fname">01:</label> <input type="text" id="0" name="0" value="Foo"><br>
-  <label for="fname">02:</label> <input type="text" id="1" name="1" value="Foo"><br>
-  <br>
-  <label for="fname">03:</label> <input type="text" id="2" name="2" value="Foo"><br>
-  <label for="fname">04:</label> <input type="text" id="3" name="3" value="Foo"><br>
-  <label for="fname">05:</label> <input type="text" id="4" name="4" value="Foo"><br>
-  <label for="fname">06:</label> <input type="text" id="5" name="5" value="Foo"><br>
-  <label for="fname">07:</label> <input type="text" id="6" name="6" value="Foo"><br>
-  <label for="fname">08:</label> <input type="text" id="7" name="7" value="Foo"><br>
-  <label for="fname">09:</label> <input type="text" id="8" name="8" value="Foo"><br>
-  <label for="fname">10:</label> <input type="text" id="9" name="9" value="Foo"><br>
-  <label for="fname">11:</label> <input type="text" id="10" name="10" value="Foo"><br>
-  <label for="fname">12:</label> <input type="text" id="11" name="11" value="Foo"><br>
-  <label for="fname">13:</label> <input type="text" id="12" name="12" value="Foo"><br>
-  <label for="fname">14:</label> <input type="text" id="13" name="13" value="Foo"><br>
-  <label for="fname">15:</label> <input type="text" id="14" name="14" value="Foo"><br>
-  <label for="fname">16:</label> <input type="text" id="15" name="15" value="Foo"><br>
-  <label for="fname">17:</label> <input type="text" id="16" name="16" value="Foo"><br>
-  <br>
-  <label for="fname">19:</label> <input type="text" id="17" name="17" value="Foo"><br>
-  <label for="fname">19:</label> <input type="text" id="18" name="18" value="Foo"><br>
-  <label for="fname">20:</label> <input type="text" id="19" name="19" value="Foo"><br>
-  <label for="fname">21:</label> <input type="text" id="20" name="20" value="Foo"><br>
-  <label for="fname">22:</label> <input type="text" id="21" name="21" value="Foo"><br>
-  <label for="fname">23:</label> <input type="text" id="22" name="22" value="Foo"><br>
-  <label for="fname">24:</label> <input type="text" id="23" name="23" value="Foo"><br>
-  <label for="fname">25:</label> <input type="text" id="24" name="24" value="Foo"><br>
-  <label for="fname">26:</label> <input type="text" id="25" name="25" value="Foo"><br>
-  <label for="fname">27:</label> <input type="text" id="26" name="26" value="Foo"><br>
-  <label for="fname">28:</label> <input type="text" id="27" name="27" value="Foo"><br>
-  <label for="fname">29:</label> <input type="text" id="28" name="28" value="Foo"><br>
-  <label for="fname">30:</label> <input type="text" id="29" name="29" value="Foo"><br>
-  <label for="fname">31:</label> <input type="text" id="30" name="30" value="Foo"><br>
-  <label for="fname">32:</label> <input type="text" id="31" name="31" value="Foo"><br>
-  <label for="fname">33:</label> <input type="text" id="32" name="32" value="Foo"><br>
-  <label for="fname">34:</label> <input type="text" id="33" name="33" value="Foo"><br>
-  <label for="fname">35:</label> <input type="text" id="34" name="34" value="Foo"><br>
-  <label for="fname">36:</label> <input type="text" id="35" name="35" value="Foo"><br>
-  <label for="fname">37:</label> <input type="text" id="36" name="36" value="Foo"><br>
-  <label for="fname">38:</label> <input type="text" id="37" name="37" value="Foo"><br>
-  <label for="fname">39:</label> <input type="text" id="38" name="38" value="Foo"><br>
-  <label for="fname">40:</label> <input type="text" id="39" name="39" value="Foo"><br>
-  <br>
-  <label for="fname">41:</label> <input type="text" id="40" name="40" value="X"><br>
-  <label for="fname">42:</label> <input type="text" id="41" name="41" value="X"><br>
-  <label for="fname">43:</label> <input type="text" id="42" name="42" value="X"><br>
-  <label for="fname">44:</label> <input type="text" id="43" name="43" value="Foo"><br>
-  <label for="fname">45:</label> <input type="text" id="44" name="44" value="Foo"><br>
-  <br>
-  <label for="fname">46:</label> <input type="text" id="45" name="45" value="X"><br>
-  <label for="fname">47:</label> <input type="text" id="46" name="46" value="X"><br>
-  <label for="fname">48:</label> <input type="text" id="47" name="47" value="Foo"><br>
-  <label for="fname">49:</label> <input type="text" id="48" name="48" value="Foo"><br>
-  <label for="fname">50:</label> <input type="text" id="49" name="49" value="Foo"><br>
-  <br>
-  <label for="fname">51:</label> <input type="text" id="50" name="50" value="X"><br>
-  <label for="fname">52:</label> <input type="text" id="51" name="51" value="X"><br>
-  <br>
-  <label for="fname">53:</label> <input type="text" id="52" name="52" value="X"><br>
-  <label for="fname">54:</label> <input type="text" id="53" name="53" value="X"><br>
-  <label for="fname">55:</label> <input type="text" id="54" name="54" value="X"><br>
-  <label for="fname">56:</label> <input type="text" id="55" name="55" value="X"><br>
-  <label for="fname">57:</label> <input type="text" id="56" name="56" value="X"><br>
-  <label for="fname">58:</label> <input type="text" id="57" name="57" value="X"><br>
-  <label for="fname">59:</label> <input type="text" id="58" name="58" value="X"><br>
-  <label for="fname">60:</label> <input type="text" id="59" name="59" value="X"><br>
-  <label for="fname">61:</label> <input type="text" id="60" name="60" value="X"><br>
-  <label for="fname">62:</label> <input type="text" id="61" name="61" value="X"><br>
-  <br>
-  <br>
-  <label for="fname">63:</label> <input type="text" id="62" name="62" value="X"><br>
-  <br>
-  <label for="fname">64:</label> <input type="text" id="63" name="63" value="X"><br>
-  <br>
-  <label for="fname">65:</label> <input type="text" id="64" name="64" value="X"><br>
-  <label for="fname">66:</label> <input type="text" id="65" name="65" value="X"><br>
-  <label for="fname">67:</label> <input type="text" id="66" name="66" value="X"><br>
-  <br>
-  <label for="fname">68:</label> <input type="text" id="67" name="67" value="X"><br>
-  <br>
-  <label for="fname">69:</label> <input type="text" id="68" name="68" value="X"><br>
-  <label for="fname">70:</label> <input type="text" id="69" name="69" value="X"><br>
-  <br>
-  <label for="fname">71:</label> <input type="text" id="70" name="70" value="X"><br>
-  <label for="fname">72:</label> <input type="text" id="71" name="71" value="X"><br>
-</form>
+      <div class="formbold-input-group">
+        <label for="age" class="formbold-form-label"> Estado Civil </label>
+        <select class="formbold-form-select" name="estado_civil" id="estado_civil">
+          <option value="Solteiro">Solteiro</option>
+          <option value="Casado">Casado</option>
+        </select>
+      </div>
 
-</body>
-</html>
+      <div class="formbold-input-group">
+        <label for="age" class="formbold-form-label">Regime de Bens</label>
+        <select class="formbold-form-select" name="regime_de_bens" id="regime_de_bens">
+          <option value="Regime de Bens1">Regime de Bens 1</option>
+          <option value="Regime de Bens2">Regime de Bens 2</option>
+        </select>
+      </div>
 
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label">Nome do Cônjuge</label>
+        <input
+          type="text"
+          name="nome_conjuge"
+          id="nome_conjuge"
+          placeholder="Nome do Cônjuge"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label">Residência</label>
+        <input
+          type="text"
+          name="residencia"
+          id="residencia"
+          placeholder="Residência"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label">Cidade de Residência</label>
+        <input
+          type="text"
+          name="cidade_residencia"
+          id="cidade_residencia"
+          placeholder="Residência do Procurador"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label">CC/BI</label>
+        <input
+          type="text"
+          name="cc_cliente"
+          id="cc_cliente"
+          placeholder="CC/BI do Cliente"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label">CC/BI</label>
+        <input
+          type="text"
+          name="cc_conjuge"
+          id="cc_conjuge"
+          placeholder="CC/BI do Cônjuge"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label">NIF do Cliente</label>
+        <input
+          type="text"
+          name="nif_cliente"
+          id="nif_cliente"
+          placeholder="NIF do Cliente"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label">NIF do Cônjuge</label>
+        <input
+          type="text"
+          name="nif_conjuge"
+          id="nif_conjuge"
+          placeholder="NIF do Cônjuge"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label">Telemóvel do Cliente</label>
+        <input
+          type="text"
+          name="tlmv_cliente"
+          id="tlmv_cliente"
+          placeholder="Telemóvel do Cliente"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label">Telemóvel do Cônjuge</label>
+        <input
+          type="text"
+          name="tlmv_conjuge"
+          id="tlmv_conjuge"
+          placeholder="Telemóvel do Cônjuge"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label">E-mail</label>
+        <input
+          type="email"
+          name="email_cliente"
+          id="email_cliente"
+          placeholder="Email"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label">Designação no Contrato</label>
+        <select class="formbold-form-select" name="designacao_contrato" id="designacao_contrato">
+          <option value="Proprietário">Proprietário</option>
+          <option value="Senhorio">Senhorio</option>
+          <option value="Trespassante">Trespassante</option>
+          <option value="Outro">Outro</option>
+        </select>
+      </div>
+
+      <mark>Clausula 1</mark>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Propósito do Imóvel </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Propósito do Imóvel"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Número de Divisões</label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Número de Divisões"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Área em m^2 </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Área em m^2"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Rua / Avenida </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Rua / Avenida"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Freguesia </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Freguesia"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Concelho </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Concelho"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Localização da Conservatória do Registo Predial </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Localização da Conservatória do Registo Predial"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Nº da Ficha </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Nº da Ficha"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Nº da Licença de Construção / Utilização </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Nº da Licença de Construção / Utilização"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Câmara Municipal que emitiu a Licença </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Câmara Municipal que emitiu a Licença"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Data de Emissão da Licença </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Data de Emissão da Licença"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Nº da Matriz Predial </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Nº da Matriz Predial"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Freguesia da Matriz Predial </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Freguesia da Matriz Predial"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Omisso na Matriz </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Omisso na Matriz"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Nº do CER CE </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Nº do CER CE"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Data de Emissão </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Data de Emissão"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Nome do Perito </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Nome do Perito"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Nº do Perito </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Nº do Perito"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <mark>Clausula 2</mark>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Interesse no Imóvel </label>
+        <select class="formbold-form-select" name="occupation" id="occupation">
+          <option value="Compra"> Compra </option>
+          <option value="Trespasse"> Trespasse </option>
+          <option value="Arrendamento"> Arrendamento </option>
+        </select>
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Preço (€) </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Preço (€)"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Preço (€ por extenso) </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Preço (€ por extenso)"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <mark>Clausula 3</mark>
+
+      <div class="formbold-input-radio-wrapper">
+        <input type="checkbox" id="checkbox1" name="checkbox1" value="Value1">
+        <label for="email" class="formbold-form-label"> O imóvel encontra-se livre de quaisquer ónus ou encargos </label>
+      </div><br>
+
+      <div class="formbold-input-radio-wrapper">
+        <input type="checkbox" id="checkbox2" onclick="enable()" name="checkbox2" value="Value2">
+        <label for="email" class="formbold-form-label"> O Segundo Contratante declara que sobre o imóvel descrito na cláusula 1.ª recaem os seguintes ónus e encargos </label>
+      </div><br>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label" id="hipotecas" style="display:none"> Hipotecas e Penhoras </label>
+        <input
+          type="email"
+          name="lastname"
+          id="hipotecas2"
+          placeholder="Hipotecas e Penhoras"
+          class="formbold-form-input"
+          style="display:none"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label" id="preco" style="display:none"> Preço (€) </label>
+        <input
+          type="email"
+          name="lastname"
+          id="preco2"
+          placeholder="Preço (€)"
+          class="formbold-form-input"
+          style="display:none"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label" id="a_favor_de" style="display:none"> a favor de </label>
+        <input
+          type="email"
+          name="lastname"
+          id="a_favor_de2"
+          placeholder="a favor de"
+          class="formbold-form-input"
+          style="display:none"
+        />
+      </div>
+
+      <script>
+        function enable() {
+          var checkbox = document.getElementById("checkbox2");
+
+          var hipotecas = document.getElementById("hipotecas");
+          var hipotecas2 = document.getElementById("hipotecas2");
+          var preco = document.getElementById("preco");
+          var preco2 = document.getElementById("preco2");
+          var a_favor_de = document.getElementById("a_favor_de");
+          var a_favor_de2 = document.getElementById("a_favor_de2");
+
+          if(checkbox2.checked == true){
+            hipotecas.style.display = "block";
+            preco.style.display = "block";
+            a_favor_de.style.display = "block";
+            hipotecas2.style.display = "block";
+            preco2.style.display = "block";
+            a_favor_de2.style.display = "block";
+          } else {
+            hipotecas.style.display = "none";
+            preco.style.display = "none";
+            a_favor_de.style.display = "none";
+            hipotecas2.style.display = "none";
+            preco2.style.display = "none";
+            a_favor_de2.style.display = "none";
+          }
+        }
+      </script>
+
+      <mark>Cláusula 4</mark>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Regime do Contrato da Mediadora </label>
+        <select class="formbold-form-select" name="occupation" id="occupation">
+          <option value="Exclusividade"> Exclusividade </option>
+          <option value="Não Exclusividade"> Não Exclusividade </option>
+        </select>
+      </div>
+
+      <mark>Cláusula 5</mark>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> O Segundo Contratante obriga-se a pagar à Mediadora a título de remuneração:</label></div>
+      <div class="formbold-input-radio-wrapper">
+        <input type="checkbox" id="checkbox1" name="checkbox1" value="Value1">
+        <label for="email" class="formbold-form-label"> A quantia de <div class="formbold-input-group">
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Percentagem"
+          class="form-form-input"
+        />
+      <label for="email" class="formbold-form-label"> % calculada sobre o preço pelo qual o negócio é efetivamente concretizado, acrescida de IVA à taxa legal em vigor</label>
+      </div><br>
+
+      <div class="formbold-input-radio-wrapper">
+        <input type="checkbox" id="checkbox3" name="checkbox1" value="Value1">
+        <label for="email" class="formbold-form-label"> A quantia de <div class="formbold-input-group">
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Quantia em Euros"
+          class="form-form-input"
+        />
+        <label for="email" class="formbold-form-label"> Euros </label>
+        <input
+            type="email"
+            name="lastname"
+            id="email"
+            placeholder="Quantia por extenso"
+            class="form-form-input"
+        />
+        <label for="email" class="formbold-form-label"> acrescida do IVA à taxa legal em vigor </label>
+      </div><br>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> O pagamento da remuneração apenas será efetuado nas seguintes condições: </label></div>
+
+      <div class="formbold-input-radio-wrapper">
+        <input type="checkbox" id="checkbox3" name="checkbox1" value="Value1">
+        <label for="email" class="formbold-form-label"> O total da remuneração aquando da celebração da escritura ou conclusão do negócio visado.
+      </div><br>
+
+      <div class="formbold-input-radio-wrapper">
+        <input type="checkbox" id="checkbox1" name="checkbox1" value="Value1">
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="percentagem de remuneração"
+          class="form-form-input"
+        />
+        <label for="email" class="formbold-form-label"> % após a celebração do contrato-promessa e o remanescente </label>
+        <input
+            type="email"
+            name="lastname"
+            id="email"
+            placeholder="remanescente percentual"
+            class="form-form-input"
+        />
+        <label for="email" class="formbold-form-label"> % na celebração da escritura ou conclusão do negócio </label>
+      </div><br>
+
+      <div class="formbold-input-radio-wrapper">
+        <input type="checkbox" id="checkbox3" name="checkbox1" value="Value1">
+        <label for="email" class="formbold-form-label"> O total da remuneração aquando da celebração da escritura ou conclusão do negócio visado.
+      </div><br>
+
+      <mark>Cláusula 8</mark>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Validade do Contrato </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Validade"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <mark>Cláusula 9</mark>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Prazo de entrega de todos os elementos julgados </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Prazo (dias)"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <mark>Cláusula 10</mark>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Nome do angariador imobiliário </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Nome do angariador imobiliário"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Nº CC do angariador imobiliário </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Nº CC do angariador imobiliário"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> NIF do angariador imobiliário </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="NIF do angariador imobiliário"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <mark>Cláusula 11</mark>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Designação da Comarca </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Designação da Comarca"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <mark>Cláusula 12</mark>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Nome do centro de resolução alternativo de litígios de consumo </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder=" Nome do Centro de resolução alternativo de litígios de consumo"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-input-group">
+        <label for="email" class="formbold-form-label"> Website do centro de resolução </label>
+        <input
+          type="email"
+          name="lastname"
+          id="email"
+          placeholder="Website do centro de resolução"
+          class="formbold-form-input"
+        />
+      </div>
+
+      <mark>Cláusula 14</mark>
+
+      <div class="formbold-input-radio-wrapper">
+        <label for="ans" class="formbold-form-label">
+          Autoriza a incorporação dos seus dados pessoais recolhidos na base de dados da Mediadora?
+        </label>
+
+        <div class="formbold-radio-flex">
+          <div class="formbold-radio-group">
+            <label class="formbold-radio-label">
+              <input
+                class="formbold-input-radio"
+                type="radio"
+                name="ans"
+                id="ans"
+              />
+              Yes
+              <span class="formbold-radio-checkmark"></span>
+            </label>
+          </div>
+
+          <div class="formbold-radio-group">
+            <label class="formbold-radio-label">
+              <input
+                class="formbold-input-radio"
+                type="radio"
+                name="ans"
+                id="ans"
+              />
+              No
+              <span class="formbold-radio-checkmark"></span>
+            </label>
+          </div>
+
+          <button class="formbold-btn" onclick="loadPdf()">Generate PDF</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  mark {
+    background-color: #D3D3D3;
+    color: black;
+  }
+  .formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+  }
+
+  .formbold-form-wrapper {
+    margin: 0 auto;
+    max-width: 570px;
+    width: 100%;
+    background: white;
+    padding: 40px;
+  }
+
+  .formbold-form-img {
+    margin-bottom: 45px;
+  }
+
+  .formbold-input-group {
+    margin-bottom: 18px;
+  }
+
+  .formbold-form-select {
+    width: 100%;
+    padding: 12px 22px;
+    border-radius: 5px;
+    border: 1px solid #dde3ec;
+    background: #ffffff;
+    font-size: 16px;
+    color: #536387;
+    outline: none;
+    resize: none;
+  }
+
+  .formbold-input-radio-wrapper {
+    margin-bottom: 25px;
+  }
+  .formbold-radio-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .formbold-radio-label {
+    font-size: 14px;
+    line-height: 24px;
+    color: #07074d;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .formbold-input-radio {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .formbold-radio-checkmark {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #ffffff;
+    border: 1px solid #dde3ec;
+    border-radius: 50%;
+  }
+  .formbold-radio-label
+    .formbold-input-radio:checked
+    ~ .formbold-radio-checkmark {
+    background-color: #6a64f1;
+  }
+  .formbold-radio-checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+
+  .formbold-radio-label
+    .formbold-input-radio:checked
+    ~ .formbold-radio-checkmark:after {
+    display: block;
+  }
+
+  .formbold-radio-label .formbold-radio-checkmark:after {
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ffffff;
+    transform: translate(-50%, -50%);
+  }
+
+  .formbold-form-input {
+    width: 100%;
+    padding: 13px 22px;
+    border-radius: 5px;
+    border: 1px solid #dde3ec;
+    background: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    outline: none;
+    resize: none;
+  }
+  .formbold-form-input::placeholder {
+    color: #536387;
+  }
+  .formbold-form-input:focus {
+    border-color: #6a64f1;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+  .formbold-form-label {
+    color: #07074d;
+    font-size: 14px;
+    line-height: 24px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .formbold-btn {
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 14px 25px;
+    border: none;
+    font-weight: 500;
+    background-color: #6a64f1;
+    color: white;
+    cursor: pointer;
+    margin-top: 25px;
+  }
+  .formbold-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+</style>
