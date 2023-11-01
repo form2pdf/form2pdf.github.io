@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="https://unpkg.com/pdf-lib@1.4.0"></script>
+    <script type="text/javascript" src="https://unpkg.com/downloadjs@1.4.7"></script>
+    <script src="/js/positions.js"></script>
+    <script src="/js/main.js"></script>
+</head>
+
+<body>
+
+<h2>HTML Forms</h2>
+
+<button onclick="loadPdf()">Generate PDF</button>
+
+<form name="form">
+  <label for="fname">01:</label> <input type="text" id="0" name="0" value="Foo"><br>
+  <label for="fname">02:</label> <input type="text" id="1" name="1" value="Foo"><br>
+  <br>
+  <label for="fname">03:</label> <input type="text" id="2" name="2" value="Foo"><br>
+  <label for="fname">04:</label> <input type="text" id="3" name="3" value="Foo"><br>
+  <label for="fname">05:</label> <input type="text" id="4" name="4" value="Foo"><br>
+  <label for="fname">06:</label> <input type="text" id="5" name="5" value="Foo"><br>
+  <label for="fname">07:</label> <input type="text" id="6" name="6" value="Foo"><br>
+  <label for="fname">08:</label> <input type="text" id="7" name="7" value="Foo"><br>
+  <label for="fname">09:</label> <input type="text" id="8" name="8" value="Foo"><br>
+  <label for="fname">10:</label> <input type="text" id="9" name="9" value="Foo"><br>
+  <label for="fname">11:</label> <input type="text" id="10" name="10" value="Foo"><br>
+  <label for="fname">12:</label> <input type="text" id="11" name="11" value="Foo"><br>
+  <label for="fname">13:</label> <input type="text" id="12" name="12" value="Foo"><br>
+  <label for="fname">14:</label> <input type="text" id="13" name="13" value="Foo"><br>
+  <label for="fname">15:</label> <input type="text" id="14" name="14" value="Foo"><br>
+  <label for="fname">16:</label> <input type="text" id="15" name="15" value="Foo"><br>
+  <label for="fname">17:</label> <input type="text" id="16" name="16" value="Foo"><br>
+  <br>
+  <label for="fname">19:</label> <input type="text" id="17" name="17" value="Foo"><br>
+  <label for="fname">19:</label> <input type="text" id="18" name="18" value="Foo"><br>
+  <label for="fname">20:</label> <input type="text" id="19" name="19" value="Foo"><br>
+  <label for="fname">21:</label> <input type="text" id="20" name="20" value="Foo"><br>
+  <label for="fname">22:</label> <input type="text" id="21" name="21" value="Foo"><br>
+  <label for="fname">23:</label> <input type="text" id="22" name="22" value="Foo"><br>
+  <label for="fname">24:</label> <input type="text" id="23" name="23" value="Foo"><br>
+  <label for="fname">25:</label> <input type="text" id="24" name="24" value="Foo"><br>
+  <label for="fname">26:</label> <input type="text" id="25" name="25" value="Foo"><br>
+  <label for="fname">27:</label> <input type="text" id="26" name="26" value="Foo"><br>
+  <label for="fname">28:</label> <input type="text" id="27" name="27" value="Foo"><br>
+  <label for="fname">29:</label> <input type="text" id="28" name="28" value="Foo"><br>
+  <label for="fname">30:</label> <input type="text" id="29" name="29" value="Foo"><br>
+  <label for="fname">31:</label> <input type="text" id="30" name="30" value="Foo"><br>
+  <label for="fname">32:</label> <input type="text" id="31" name="31" value="Foo"><br>
+  <label for="fname">33:</label> <input type="text" id="32" name="32" value="Foo"><br>
+  <label for="fname">34:</label> <input type="text" id="33" name="33" value="Foo"><br>
+  <label for="fname">35:</label> <input type="text" id="34" name="34" value="Foo"><br>
+  <label for="fname">36:</label> <input type="text" id="35" name="35" value="Foo"><br>
+  <label for="fname">37:</label> <input type="text" id="36" name="36" value="Foo"><br>
+  <label for="fname">38:</label> <input type="text" id="37" name="37" value="Foo"><br>
+  <label for="fname">39:</label> <input type="text" id="38" name="38" value="Foo"><br>
+  <label for="fname">40:</label> <input type="text" id="39" name="39" value="Foo"><br>
+  <br>
+  <label for="fname">41:</label> <input type="text" id="40" name="40" value="X"><br>
+  <label for="fname">42:</label> <input type="text" id="41" name="41" value="X"><br>
+  <label for="fname">43:</label> <input type="text" id="42" name="42" value="X"><br>
+  <label for="fname">44:</label> <input type="text" id="43" name="43" value="Foo"><br>
+  <label for="fname">45:</label> <input type="text" id="44" name="44" value="Foo"><br>
+  <br>
+  <label for="fname">46:</label> <input type="text" id="45" name="45" value="X"><br>
+  <label for="fname">47:</label> <input type="text" id="46" name="46" value="X"><br>
+  <label for="fname">48:</label> <input type="text" id="47" name="47" value="Foo"><br>
+  <label for="fname">49:</label> <input type="text" id="48" name="48" value="Foo"><br>
+  <label for="fname">50:</label> <input type="text" id="49" name="49" value="Foo"><br>
+  <br>
+  <label for="fname">51:</label> <input type="text" id="50" name="50" value="X"><br>
+  <label for="fname">52:</label> <input type="text" id="51" name="51" value="X"><br>
+  <br>
+  <label for="fname">53:</label> <input type="text" id="52" name="52" value="X"><br>
+  <label for="fname">54:</label> <input type="text" id="53" name="53" value="X"><br>
+  <label for="fname">55:</label> <input type="text" id="54" name="54" value="X"><br>
+  <label for="fname">56:</label> <input type="text" id="55" name="55" value="X"><br>
+  <label for="fname">57:</label> <input type="text" id="56" name="56" value="X"><br>
+  <label for="fname">58:</label> <input type="text" id="57" name="57" value="X"><br>
+  <label for="fname">59:</label> <input type="text" id="58" name="58" value="X"><br>
+  <label for="fname">60:</label> <input type="text" id="59" name="59" value="X"><br>
+  <label for="fname">61:</label> <input type="text" id="60" name="60" value="X"><br>
+  <label for="fname">62:</label> <input type="text" id="61" name="61" value="X"><br>
+  <br>
+  <br>
+  <label for="fname">63:</label> <input type="text" id="62" name="62" value="X"><br>
+  <br>
+  <label for="fname">64:</label> <input type="text" id="63" name="63" value="X"><br>
+  <br>
+  <label for="fname">65:</label> <input type="text" id="64" name="64" value="X"><br>
+  <label for="fname">66:</label> <input type="text" id="65" name="65" value="X"><br>
+  <label for="fname">67:</label> <input type="text" id="66" name="66" value="X"><br>
+  <br>
+  <label for="fname">68:</label> <input type="text" id="67" name="67" value="X"><br>
+  <br>
+  <label for="fname">69:</label> <input type="text" id="68" name="68" value="X"><br>
+  <label for="fname">70:</label> <input type="text" id="69" name="69" value="X"><br>
+  <br>
+  <label for="fname">71:</label> <input type="text" id="70" name="70" value="X"><br>
+  <label for="fname">72:</label> <input type="text" id="71" name="71" value="X"><br>
+</form>
+
+</body>
+</html>
+
